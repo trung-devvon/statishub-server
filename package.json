@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "src/server.js",
   "scripts": {
+    "build": "prisma generate && prisma migrate deploy",
     "dev": "NODE_ENV=development nodemon src/server.js",
     "start": "NODE_ENV=production node src/server.js"
   },
