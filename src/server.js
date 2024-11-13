@@ -1,9 +1,15 @@
-require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
 const { checkDatabaseConnection } = require('./config/database');
 const initRoutes = require('./routes')
 
+
+
+if (process.env.NODE_ENV === 'production') {
+  require('dotenv').config(); // Load .env
+} else {
+  require('dotenv').config({ path: '.env.local' }); // Load .env.local
+}
 const app = express();
 
 
