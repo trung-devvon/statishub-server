@@ -6,9 +6,9 @@ const initRoutes = require('./routes')
 
 
 if (process.env.NODE_ENV === 'production') {
-  require('dotenv').config(); // Load .env
+  require('dotenv').config();
 } else {
-  require('dotenv').config({ path: '.env.local' }); // Load .env.local
+  require('dotenv').config({ path: '.env.local' });
 }
 const app = express();
 
